@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 
 import App from './App';
 
-const composeEnhancers = composeWithDevTools(options)
+const composeEnhancers = composeWithDevTools()
 
 let store = createStore(reducer,
   composeEnhancers(
