@@ -1,4 +1,5 @@
 import React from 'react';
+import TwitterSearch from './TwitterSearch'
 
 
 class App extends React.Component {
@@ -13,6 +14,7 @@ class App extends React.Component {
   return (
     <div className="App">
       App
+      < TwitterSearch />
     </div>
     );
   }
