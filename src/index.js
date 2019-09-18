@@ -4,13 +4,12 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux'
+import tweetsReducer from './reducers/tweetsReducer'
 
 import App from './App';
 
-const composeEnhancers = composeWithDevTools()
-
-let store = createStore(reducer,
-  composeEnhancers(
+let store = createStore(tweetsReducer,
+  composeWithDevTools(
     applyMiddleware(thunk)
   )
 );
