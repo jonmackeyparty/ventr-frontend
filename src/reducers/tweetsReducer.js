@@ -1,5 +1,9 @@
 export default function tweetsReducer(state = { user: {} }, action) {
 
-  return state;
-
+  switch(action.type) {
+    case 'FETCH_USER':
+      return { user: action.payload }
+    default:
+      return state
+  }
 }
