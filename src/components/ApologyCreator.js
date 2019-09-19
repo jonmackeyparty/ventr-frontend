@@ -5,7 +5,7 @@ export default class ApologyCreator extends React.Component {
   render() {
     return (
       <div>
-        I'm an apology creator button.
+        <button>Create Apology</button>
       </div>
     )
   }
