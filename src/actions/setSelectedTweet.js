@@ -6,5 +6,5 @@ export function setSelectedTweet(id) {
       type: 'SET_SELECTED_TWEET',
       payload: data
     }))
-  }
+  };
 }
