@@ -1,4 +1,7 @@
 import React from 'react'
+import {
+  withRouter
+} from 'react-router-dom'
 import { connect } from 'react-redux';
 import { postResponse } from '../actions/postResponse'
 
@@ -20,6 +23,7 @@ class ResponseCreator extends React.Component {
     this.setState({
       response: ''
     })
+    this.props.history.push(`/tweets/${this.props.tweet_id}/responses`)
   }
 
   render() {
@@ -34,4 +38,4 @@ class ResponseCreator extends React.Component {
   }
 }
 
-export default connect(null, { postResponse })(ResponseCreator)
+export default withRouter(connect(null, { postResponse })(ResponseCreator))

@@ -1,6 +1,9 @@
 import React from 'react'
+import {
+  withRouter
+} from 'react-router-dom'
 import { connect } from 'react-redux';
-import { fetchUser } from '../actions/fetchUser';
+import { postUser } from '../actions/postUser';
 
 class TwitterSearch extends React.Component {
 
@@ -16,7 +19,8 @@ class TwitterSearch extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.fetchUser(this.state.username);
+    this.props.postUser(this.state.username);
+    this.props.history.push('/tweets')
   }
 
   render() {
@@ -31,4 +35,4 @@ class TwitterSearch extends React.Component {
   }
 }
 
-export default connect(null, { fetchUser })(TwitterSearch)
+export default withRouter(connect(null, { postUser })(TwitterSearch))

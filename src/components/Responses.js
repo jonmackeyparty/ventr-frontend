@@ -6,7 +6,7 @@ const Responses = ( {responses} ) => {
     <div>
       {responses.length > 0 &&
         <div>
-          Your Responses:
+          <strong>Your Responses:</strong>
         </div>
       }
       {responses.map((tweet, index) =>

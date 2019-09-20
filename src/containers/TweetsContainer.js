@@ -8,8 +8,8 @@ class TweetsContainer extends React.Component {
   render() {
     return(
       <div>
-        <SelectedTweet selected_tweet={this.props.selected_tweet} />
-        <Tweets tweets={this.props.tweets} />
+          <SelectedTweet selected_tweet={this.props.selected_tweet} />
+          <Tweets tweets={this.props.tweets} />
       </div>
     )
   }
