@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route } from 'react-router-dom'
 import { connect } from 'react-redux';
 import SelectedTweet from '../components/SelectedTweet'
 import Tweets from '../components/Tweets'
@@ -8,8 +9,8 @@ class TweetsContainer extends React.Component {
   render() {
     return(
       <div>
-          <SelectedTweet selected_tweet={this.props.selected_tweet} />
-          <Tweets tweets={this.props.tweets} />
+          <Route path='/tweet/:id' render={() => <SelectedTweet selected_tweet={this.props.selected_tweet} />} />
+          <Route path='/tweets' render={() => <Tweets tweets={this.props.tweets} />} />
       </div>
     )
   }

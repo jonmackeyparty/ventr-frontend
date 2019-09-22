@@ -8,7 +8,7 @@ import { postUser } from '../actions/postUser';
 class TwitterSearch extends React.Component {
 
   state = {
-    username: 'Enter user name'
+    username: ''
   }
 
   handleChange = event => {
@@ -27,7 +27,7 @@ class TwitterSearch extends React.Component {
     return (
       <div>
         <form onSubmit={event => this.handleSubmit(event)}>
-          <strong>@</strong><input type='text' value={this.state.username} onChange={event => this.handleChange(event)} />
+          <strong>@</strong><input type='text'  placeholder='Enter User name' value={this.state.username} onChange={event => this.handleChange(event)} />
           <input type='submit' />
         </form>
       </div>

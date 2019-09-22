@@ -8,7 +8,7 @@ import { postResponse } from '../actions/postResponse'
 class ResponseCreator extends React.Component {
 
   state = {
-    response: 'Enter your response'
+    response: ''
   }
 
   handleChange = event => {
@@ -23,14 +23,14 @@ class ResponseCreator extends React.Component {
     this.setState({
       response: ''
     })
-    this.props.history.push(`/tweets/${this.props.tweet_id}/responses`)
+    // this.props.history.push(`/tweets/${this.props.tweet_id}/responses`)
   }
 
   render() {
     return (
       <div>
         <form onSubmit={event => this.handleSubmit(event)}>
-          <input type='text' value={this.state.response} onChange={event => this.handleChange(event)} />
+          <input type='text' value={this.state.response} placeholder='Enter your response' onChange={event => this.handleChange(event)} />
           <input type='submit' />
         </form>
       </div>
