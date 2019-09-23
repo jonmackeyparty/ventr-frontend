@@ -1,4 +1,4 @@
-export default function tweetsReducer(state = { user: {tweets: [], selected_tweet: {responses: []}} }, action) {
+export default function tweetsReducer(state = { user: {tweets: [], selected_tweet: {id: '', responses: []}} }, action) {
 
   switch(action.type) {
     case 'POST_USER':
@@ -6,7 +6,7 @@ export default function tweetsReducer(state = { user: {tweets: [], selected_twee
     case 'SET_SELECTED_TWEET':
       return { user: {...state.user, selected_tweet: action.payload} }
     case 'POST_RESPONSE':
-      return { user: {tweets: [], selected_tweet: action.payload} }
+      return { user: {...state.user, selected_tweet: action.payload} }
     default:
       return state
   }

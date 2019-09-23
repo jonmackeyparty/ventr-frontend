@@ -1,18 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
 import TwitterSearch from './components/TwitterSearch';
+import ResponsesContainer from './containers/ResponsesContainer';
+import ApologyContainer from './containers/ApologyContainer';
 import TweetsContainer from './containers/TweetsContainer';
 
 class App extends React.Component {
 
   render() {
     return (
-      <Router>
-        <>
+        <div>
           <TwitterSearch />
           <TweetsContainer />
-        </>
-      </Router>
+          <ResponsesContainer />
+          <ApologyContainer />
+        </div>
     );
   }
 }

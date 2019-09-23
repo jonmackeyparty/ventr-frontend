@@ -19,11 +19,12 @@ class ResponseCreator extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.postResponse(this.state.response, this.props.tweet_id);
+    // debugger;
+    this.props.postResponse(this.state.response, this.props.selected_tweet.id);
     this.setState({
       response: ''
     })
-    // this.props.history.push(`/tweets/${this.props.tweet_id}/responses`)
+    this.props.history.push(`/tweets/${this.props.selected_tweet.id}/responses`)
   }
 
   render() {
