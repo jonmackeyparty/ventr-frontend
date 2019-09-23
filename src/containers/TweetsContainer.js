@@ -6,15 +6,11 @@ import Tweets from '../components/Tweets'
 
 class TweetsContainer extends React.Component {
 
-  // componentDidUpdate() {
-  //   debugger;
-  // }
-
   render() {
     return(
       <div>
-          <Route path='/tweets/:id' render={(routerProps) => <SelectedTweet {...routerProps} selected_tweet={this.props.selected_tweet} />} />
-          <Route exact path='/tweets' render={(routerProps) => <Tweets {...routerProps} tweets={this.props.tweets} />} />
+          <Route path='/tweets/:id' render={() => <SelectedTweet selected_tweet={this.props.selected_tweet} />} />
+          <Route exact path='/tweets' render={() => <Tweets tweets={this.props.tweets} />} />
       </div>
     )
   }

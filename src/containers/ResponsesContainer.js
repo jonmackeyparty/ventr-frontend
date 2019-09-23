@@ -13,8 +13,8 @@ class ResponsesContainer extends React.Component {
   render() {
     return(
       <div>
-        <Route path='/tweets/:id' render={(routerProps) => <ResponseCreator {...routerProps} selected_tweet={this.props.selected_tweet} />} />
-        <Route path='/tweets/:id/responses' render={(routerProps) => <Responses {...routerProps} responses={this.props.selected_tweet.responses} />} />
+        <Route path='/tweets/:id' render={() => <ResponseCreator selected_tweet={this.props.selected_tweet} />} />
+        <Route path='/tweets/:id/responses' render={() => <Responses responses={this.props.selected_tweet.responses} />} />
       </div>
     )
   }

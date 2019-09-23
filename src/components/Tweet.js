@@ -16,7 +16,7 @@ class Tweet extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id='tweet'>
         <li><br/><strong>Content:</strong> {this.props.tweet.content}<br/><strong>Date: </strong>{this.props.tweet.date}</li>
         <button type='submit' value={this.props.tweet.id} onClick={event => this.handleClick(event)}>Respond to this tweet</button >
       </div>

@@ -8,8 +8,8 @@ class ApologyContainer extends React.Component {
   render() {
     return(
       <div>
-        <Route path='/tweets/:id/responses' render={(routerProps) => <ApologyCreator {...routerProps} />} />
-        <Route path ='/tweets/:id/apology' render={(routerProps) => <Apology {...routerProps} />} />
+        <Route path='/tweets/:id/responses' render={() => <ApologyCreator />} />
+        <Route path ='/tweets/:id/apology' render={() => <Apology />} />
       </div>
     )
   }

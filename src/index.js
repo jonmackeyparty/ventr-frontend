@@ -21,7 +21,7 @@ let store = createStore(tweetsReducer,
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <Route path='/' render={(routerProps) => <App {...routerProps} />} />
+      <Route path='/' render={() => <App />} />
     </Router>
   </Provider>
     ,
