@@ -36,7 +36,7 @@ class TwitterSearch extends React.Component {
               <InputGroup>
                 <InputGroupAddon addonType='prepend'>@</InputGroupAddon>
                 <Input type='text'  placeholder='Enter User name' value={this.state.username} onChange={event => this.handleChange(event)} />
-                <Button style={{backgroundColor:'#ccd6dd', color:'#292f33'}}type='submit'>Submit</Button>
+                <Button style={{backgroundColor:'#ccd6dd', color:'#292f33'}} type='submit'>Submit</Button>
               </InputGroup>
             </Form>
           </Col>
