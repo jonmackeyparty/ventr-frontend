@@ -7,7 +7,7 @@ class Tweets extends React.Component {
     return (
       <div>
         {this.props.tweets.map((tweet, index) =>
-          <div key={index} ><Tweet tweet={tweet} /></div>)}
+          <div key={index}><Tweet tweet={tweet} /></div>)}
       </div>
     )
   }

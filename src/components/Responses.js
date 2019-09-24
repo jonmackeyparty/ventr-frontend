@@ -1,20 +1,26 @@
-import React from 'react'
+import React from 'react';
+import {
+  Container, Row, Col
+} from 'reactstrap';
+import Response from './Response'
 
 const Responses = ( {responses} ) => {
 
   return (
-    <div>
+    <Container>
       {responses.length > 0 &&
-        <div>
-          <strong>Your Responses:</strong>
-        </div>
+        <Row>
+          <Col md={{ size:6, offset: 3}}>
+            <div className="text-center">
+              <strong>Your Responses:</strong>
+            </div>
+          </Col>
+        </Row>
       }
       {responses.map((tweet, index) =>
-        <div key={index} >
-          <li><br/><strong>Content:</strong> {tweet.content}<br/><strong>Date: </strong>{tweet.date}</li>
-        </div>
+        <Response key={index} tweet={tweet} />
       )}
-    </div>
+    </Container>
   )
 }
 

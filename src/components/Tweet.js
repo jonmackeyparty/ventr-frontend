@@ -1,5 +1,10 @@
 import React from 'react'
 import {
+  Container, Row, Col,
+  Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button
+} from 'reactstrap';
+import {
   withRouter
 } from 'react-router-dom'
 import { connect } from 'react-redux';
@@ -16,10 +21,20 @@ class Tweet extends React.Component {
 
   render() {
     return (
-      <div id='tweet'>
-        <li><br/><strong>Content:</strong> {this.props.tweet.content}<br/><strong>Date: </strong>{this.props.tweet.date}</li>
-        <button type='submit' value={this.props.tweet.id} onClick={event => this.handleClick(event)}>Respond to this tweet</button >
-      </div>
+      <Container>
+        <Row>
+          <Col md={{ size:6, offset: 3}}>
+            <Card>
+              <CardImg />
+              <CardBody>
+                <CardText>{this.props.tweet.content}</CardText>
+                <CardSubtitle>{this.props.tweet.date}</CardSubtitle>
+                <Button type='submit' value={this.props.tweet.id} onClick={event => this.handleClick(event)}>Respond to this tweet</Button >
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     )
   }
 }

@@ -2,6 +2,10 @@ import React from 'react'
 import {
   withRouter
 } from 'react-router-dom'
+import {
+  Container, Row, Col,
+  Form, Input, InputGroup, Button
+} from 'reactstrap'
 import { connect } from 'react-redux';
 import { postResponse } from '../actions/postResponse'
 
@@ -29,12 +33,18 @@ class ResponseCreator extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={event => this.handleSubmit(event)}>
-          <input type='text' value={this.state.response} placeholder='Enter your response' onChange={event => this.handleChange(event)} />
-          <input type='submit' />
-        </form>
-      </div>
+      <Container>
+        <Row>
+          <Col md={{ size:6, offset: 3}}>
+            <Form onSubmit={event => this.handleSubmit(event)}>
+              <InputGroup>
+                <Input type='text'  placeholder='Enter your response' value={this.state.response} onChange={event => this.handleChange(event)} />
+                <Button style={{backgroundColor:'#ccd6dd', color:'#292f33'}} type='submit'>Submit</Button>
+              </InputGroup>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
     )
   }
 }
