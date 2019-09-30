@@ -11,7 +11,7 @@ const Responses = ( {responses} ) => {
       {responses.length > 0 &&
         <Row>
           <Col md={{ size:6, offset: 3}}>
-            <div className="text-center">
+            <div className="text-center" style={{color:'white', marginTop:'10px', marginBottom:'10px'}}>
               <strong>Your Responses:</strong>
             </div>
           </Col>

@@ -21,15 +21,16 @@ class Tweet extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Container style={{marginTop:'5px', marginBottom:'5px'}}>
         <Row>
           <Col md={{ size:6, offset: 3}}>
             <Card>
-              <CardImg />
               <CardBody>
+                <img src={this.props.url} /><br/>
+                <strong>{this.props.username}</strong>
                 <CardText>{this.props.tweet.content}</CardText>
                 <CardSubtitle>{this.props.tweet.date}</CardSubtitle>
-                <Button type='submit' value={this.props.tweet.id} onClick={event => this.handleClick(event)}>Respond to this tweet</Button >
+                <Button style={{marginTop:'5px'}} type='submit' value={this.props.tweet.id} onClick={event => this.handleClick(event)}>Respond to this tweet</Button >
               </CardBody>
             </Card>
           </Col>

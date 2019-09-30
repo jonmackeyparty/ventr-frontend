@@ -29,7 +29,7 @@ class TwitterSearch extends React.Component {
 
   render() {
     return (
-        <Container style={{marginTop: '10px'}}>
+        <Container style={{marginTop: '10px', marginBottom: '5px'}}>
           <Row>
             <Col md={{ size:6, offset: 3}}>
               <Form onSubmit={event => this.handleSubmit(event)}>

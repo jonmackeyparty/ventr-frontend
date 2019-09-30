@@ -2,8 +2,10 @@ export default function tweetsReducer(state = { user: {tweets: [], selected_twee
 
   switch(action.type) {
     case 'POST_USER':
+      // debugger;
       return { user: action.payload }
     case 'SET_SELECTED_TWEET':
+      // debugger;
       return { user: {...state.user, selected_tweet: action.payload} }
     case 'POST_RESPONSE':
       return { user: {...state.user, selected_tweet: action.payload} }
