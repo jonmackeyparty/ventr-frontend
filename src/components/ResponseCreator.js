@@ -33,18 +33,22 @@ class ResponseCreator extends React.Component {
 
   render() {
     return (
-      <Container>
-        <Row>
-          <Col md={{ size:6, offset: 3}}>
-            <Form onSubmit={event => this.handleSubmit(event)}>
-              <InputGroup>
-                <Input type='text'  placeholder='Enter your response' value={this.state.response} onChange={event => this.handleChange(event)} />
-                <Button style={{backgroundColor:'#ccd6dd', color:'#292f33'}} type='submit'>Submit</Button>
-              </InputGroup>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
+      <>
+        {this.props.selected_tweet.id !== '' && this.props.selected_tweet.apology.content === '' &&
+          <Container>
+            <Row>
+              <Col md={{ size:6, offset: 3}}>
+                <Form onSubmit={event => this.handleSubmit(event)}>
+                  <InputGroup>
+                    <Input type='text'  placeholder='Enter your response' value={this.state.response} onChange={event => this.handleChange(event)} />
+                    <Button style={{backgroundColor:'#ccd6dd', color:'#292f33'}} type='submit'>Submit</Button>
+                  </InputGroup>
+                </Form>
+              </Col>
+            </Row>
+          </Container>
+        }
+      </>
     )
   }
 }

@@ -1,12 +1,36 @@
-import React from 'react'
+import React from 'react';
+import {
+  Container, Row, Col,
+  Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle
+} from 'reactstrap';
 
 export default class Apology extends React.Component {
 
+  // componentDidUpdate(prevProps, nextProps) {
+  //   debugger;
+  // }
+
   render() {
     return (
-      <div>
-        Here's your apology.
-      </div>
+      <>
+        {this.props.user.selected_tweet.apology.content !== '' &&
+          <Container style={{marginTop:'5px', marginBottom:'5px'}}>
+            <Row>
+              <Col md={{ size:6, offset: 3}}>
+                <Card>
+                  <CardBody>
+                    <img src={this.props.user.avi_url} /><br/>
+                    <strong>{this.props.user.username}</strong>
+                    <CardText>{this.props.user.selected_tweet.apology.content}</CardText>
+                    <CardSubtitle>{this.props.user.selected_tweet.apology.date}</CardSubtitle>
+                  </CardBody>
+                </Card>
+              </Col>
+            </Row>
+          </Container>
+        }
+      </>
     )
   }
 }
