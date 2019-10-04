@@ -1,8 +1,7 @@
 import React from 'react';
 import {
   Container, Row, Col,
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle
+  Card,CardText, CardBody, CardSubtitle
 } from 'reactstrap';
 
 export default class Apology extends React.Component {
@@ -20,7 +19,7 @@ export default class Apology extends React.Component {
               <Col md={{ size:6, offset: 3}}>
                 <Card>
                   <CardBody>
-                    <img src={this.props.user.avi_url} /><br/>
+                    <img src={this.props.user.avi_url} alt='twitter avi' /><br/>
                     <strong>{this.props.user.username}</strong>
                     <CardText>{this.props.user.selected_tweet.apology.content}</CardText>
                     <CardSubtitle>{this.props.user.selected_tweet.apology.date}</CardSubtitle>

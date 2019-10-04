@@ -1,15 +1,10 @@
 import React from 'react'
 import {
   Container, Row, Col,
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle
+  Card, CardText, CardBody, CardSubtitle
 } from 'reactstrap';
 
 export default class SelectedTweet extends React.Component {
-
-  // componentDidUpdate(prevProps) {
-  //   debugger;
-  // }
 
   render() {
     return (
@@ -20,7 +15,7 @@ export default class SelectedTweet extends React.Component {
               <Col md={{ size:6, offset: 3}}>
                 <Card>
                   <CardBody>
-                    <img src={this.props.url} /><br/>
+                    <img src={this.props.url} alt='twitter avi' /><br/>
                     <strong>{this.props.username}</strong>
                     <CardText>{this.props.selected_tweet.content}</CardText>
                     <CardSubtitle>{this.props.selected_tweet.date}</CardSubtitle>

@@ -1,8 +1,8 @@
 import React from 'react'
 import {
   Container, Row, Col,
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  Card, CardText, CardBody, CardSubtitle,
+  Button
 } from 'reactstrap';
 import {
   withRouter
@@ -26,7 +26,7 @@ class Tweet extends React.Component {
           <Col md={{ size:6, offset: 3}}>
             <Card>
               <CardBody>
-                <img src={this.props.url} /><br/>
+                <img src={this.props.url} alt='twitter avi'/><br/>
                 <strong>{this.props.username}</strong>
                 <CardText>{this.props.tweet.content}</CardText>
                 <CardSubtitle>{this.props.tweet.date}</CardSubtitle>

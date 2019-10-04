@@ -6,10 +6,6 @@ import ResponseCreator from '../components/ResponseCreator'
 
 class ResponsesContainer extends React.Component {
 
-  // componentDidUpdate() {
-  //   debugger;
-  // }
-
   render() {
     return(
       <div>
