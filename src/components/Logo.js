@@ -2,7 +2,7 @@ import React from 'react'
 import {
   Container, Row, Col, Media
 } from 'reactstrap'
-import logo from '../images/twittrcrop.png'
+import logo from '../images/twittrcropr.jpg'
 
 export default class Logo extends React.Component {
 
