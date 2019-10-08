@@ -5,10 +5,13 @@ class Tweets extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.props.tweets.map((tweet, index) =>
-          <div key={index}><Tweet tweet={tweet} url={this.props.url} username={this.props.username} /></div>)}
-      </div>
+      <>{!this.props.errors &&
+          <div>
+            {this.props.tweets.map((tweet, index) =>
+              <div key={index}><Tweet tweet={tweet} url={this.props.url} username={this.props.username} /></div>)}
+          </div>
+        }
+      </>
     )
   }
 }

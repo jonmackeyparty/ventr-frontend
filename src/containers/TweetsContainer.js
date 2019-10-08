@@ -9,8 +9,8 @@ class TweetsContainer extends React.Component {
   render() {
     return(
       <div>
-          <Route path='/tweets/:id' render={() => <SelectedTweet selected_tweet={this.props.selected_tweet} url={this.props.url} username={this.props.username} />} />
-          <Route exact path='/tweets' render={() => <Tweets tweets={this.props.tweets} url={this.props.url} username={this.props.username} />} />
+        <Route path='/tweets/:id' render={() => <SelectedTweet selected_tweet={this.props.selected_tweet} url={this.props.url} username={this.props.username} />} />
+        <Route exact path='/tweets' render={() => <Tweets errors={this.props.errors} tweets={this.props.tweets} url={this.props.url} username={this.props.username} />} />
       </div>
     )
   }
@@ -18,6 +18,7 @@ class TweetsContainer extends React.Component {
 
 const mapStateToProps = state => {
   return {
+    errors: state.user.errors,
     username: state.user.username,
     url: state.user.avi_url,
     tweets: state.user.tweets,
