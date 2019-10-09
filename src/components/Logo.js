@@ -1,10 +1,18 @@
-import React from 'react'
+import React from 'react';
+import {
+  withRouter
+} from 'react-router-dom';
 import {
   Container, Row, Col, Media
-} from 'reactstrap'
+} from 'reactstrap';
 import logo from '../images/twittrcropr.jpg'
 
-export default class Logo extends React.Component {
+class Logo extends React.Component {
+
+  handleClick = event => {
+    event.preventDefault();
+    this.props.history.push('/')
+  }
 
   render() {
     return (
@@ -14,8 +22,8 @@ export default class Logo extends React.Component {
             <Media style={{
               justifyContent: 'center',
               alignItems: 'center',
-            }}>
-              <img src={logo} width="499" height="333" alt="Glitched twitter logo"/>
+            }} >
+              <img src={logo} width="499" height="333" alt="Glitched twitter logo" onClick = { event => this.handleClick(event) } />
             </Media>
           </Col>
         </Row>
@@ -23,3 +31,5 @@ export default class Logo extends React.Component {
     )
   }
 }
+
+export default withRouter(Logo)
