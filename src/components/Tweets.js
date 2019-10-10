@@ -8,7 +8,9 @@ class Tweets extends React.Component {
       <>{!this.props.errors &&
           <div>
             {this.props.tweets.map((tweet, index) =>
-              <div key={index}><Tweet tweet={tweet} url={this.props.url} username={this.props.username} /></div>)}
+              <div key={index}><Tweet tweet={tweet} url={this.props.url} username={this.props.username} screen_name={this.props.screen_name} />
+              </div>)
+            }
           </div>
         }
       </>

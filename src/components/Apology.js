@@ -6,10 +6,6 @@ import {
 
 export default class Apology extends React.Component {
 
-  // componentDidUpdate(prevProps, nextProps) {
-  //   debugger;
-  // }
-
   render() {
     return (
       <>

@@ -9,8 +9,8 @@ class ApologyContainer extends React.Component {
   render() {
     return(
       <div>
-        <Route path='/tweets/:id/responses' render={() => <ApologyCreator selected_tweet={this.props.selected_tweet}/>} />
-        <Route path ='/tweets/:id/apology' render={() => <Apology user={this.props.user} />} />
+        <Route path='/:username/tweets/:id/responses' render={() => <ApologyCreator selected_tweet={this.props.selected_tweet} screen_name={this.props.screen_name} />} />
+        <Route path ='/:username/tweets/:id/apology' render={() => <Apology user={this.props.user} />} />
       </div>
     )
   }
@@ -19,6 +19,7 @@ class ApologyContainer extends React.Component {
 const mapStateToProps = state => {
   return {
     selected_tweet: state.user.selected_tweet,
+    screen_name: state.user.screen_name,
     user: state.user
   }
 }

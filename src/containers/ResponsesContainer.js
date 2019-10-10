@@ -9,8 +9,8 @@ class ResponsesContainer extends React.Component {
   render() {
     return(
       <div>
-        <Route path='/tweets/:id' render={() => <ResponseCreator selected_tweet={this.props.selected_tweet} />} />
-        <Route path='/tweets/:id/responses' render={() => <Responses responses={this.props.selected_tweet.responses} />} />
+        <Route path='/:username/tweets/:id' render={() => <ResponseCreator selected_tweet={this.props.selected_tweet} screen_name={this.props.screen_name} />} />
+        <Route path='/:username/tweets/:id/responses' render={() => <Responses responses={this.props.selected_tweet.responses} />} />
       </div>
     )
   }
@@ -18,7 +18,8 @@ class ResponsesContainer extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    selected_tweet: state.user.selected_tweet
+    selected_tweet: state.user.selected_tweet,
+    screen_name: state.user.screen_name
   }
 }
 

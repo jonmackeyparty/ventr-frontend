@@ -15,7 +15,6 @@ export default function tweetsReducer(state = {user: {
       return { user: {...state.user, selected_tweet: {...action.payload, apology: {content:'', date:''}}} }
     case 'GET_APOLOGY':
       // debugger;
-      console.log({...state.user})
       return { user: {...state.user, selected_tweet: action.payload} }
     default:
       return state

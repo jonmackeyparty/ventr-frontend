@@ -16,7 +16,7 @@ class Tweet extends React.Component {
     let tweet_id = event.target.value
     event.preventDefault();
     this.props.setSelectedTweet(tweet_id)
-    this.props.history.push(`/tweets/${tweet_id}`)
+    this.props.history.push(`/${this.props.screen_name}/tweets/${tweet_id}`)
   }
 
   render() {

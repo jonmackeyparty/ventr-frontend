@@ -12,9 +12,8 @@ class ApologyCreator extends React.Component {
 
   handleClick = event => {
     event.preventDefault();
-    // debugger;
     this.props.getApology(this.props.selected_tweet.id);
-    this.props.history.push(`/tweets/${this.props.selected_tweet.id}/apology`)
+    this.props.history.push(`/${this.props.screen_name}/tweets/${this.props.selected_tweet.id}/apology`)
   }
 
   render() {

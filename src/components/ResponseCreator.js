@@ -27,7 +27,7 @@ class ResponseCreator extends React.Component {
     this.setState({
       response: ''
     })
-    this.props.history.push(`/tweets/${this.props.selected_tweet.id}/responses`)
+    this.props.history.push(`/${this.props.screen_name}/tweets/${this.props.selected_tweet.id}/responses`)
   }
 
   render() {

@@ -24,7 +24,7 @@ class TwitterSearch extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.postUser(this.state.username);
-    this.props.history.push('/tweets')
+    this.props.history.push(`/${this.state.username}/tweets`)
   }
 
   render() {
