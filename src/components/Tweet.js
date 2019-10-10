@@ -28,8 +28,12 @@ class Tweet extends React.Component {
               <CardBody>
                 <img src={this.props.url} alt='twitter avi'/><br/>
                 <strong>{this.props.username}</strong>
-                <CardText>{this.props.tweet.content}</CardText>
-                <CardSubtitle>{this.props.tweet.date}</CardSubtitle>
+                <CardText>
+                  {this.props.tweet.content}
+                </CardText>
+                <CardSubtitle>
+                  {this.props.tweet.date}
+                </CardSubtitle>
                 <Button style={{marginTop:'5px'}} type='submit' value={this.props.tweet.id} onClick={event => this.handleClick(event)}>Respond to this tweet</Button >
               </CardBody>
             </Card>

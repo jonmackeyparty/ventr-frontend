@@ -17,8 +17,12 @@ export default class Apology extends React.Component {
                   <CardBody>
                     <img src={this.props.user.avi_url} alt='twitter avi' /><br/>
                     <strong>{this.props.user.username}</strong>
-                    <CardText>{this.props.user.selected_tweet.apology.content}</CardText>
-                    <CardSubtitle>{this.props.user.selected_tweet.apology.date}</CardSubtitle>
+                    <CardText>
+                      {this.props.user.selected_tweet.apology.content}
+                    </CardText>
+                    <CardSubtitle>
+                      {this.props.user.selected_tweet.apology.date}
+                    </CardSubtitle>
                   </CardBody>
                 </Card>
               </Col>

@@ -15,8 +15,12 @@ const Response = ( {tweet} ) => {
             <CardBody>
               <img src={egg} alt='egg avi' /><br/>
               <strong>You</strong>
-              <CardText>{tweet.content}</CardText>
-              <CardSubtitle>{tweet.date}</CardSubtitle>
+              <CardText>
+                {tweet.content}
+              </CardText>
+              <CardSubtitle>
+                {tweet.date}
+              </CardSubtitle>
             </CardBody>
           </Card>
         </Col>

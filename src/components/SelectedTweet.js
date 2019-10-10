@@ -17,8 +17,12 @@ export default class SelectedTweet extends React.Component {
                   <CardBody>
                     <img src={this.props.url} alt='twitter avi' /><br/>
                     <strong>{this.props.username}</strong>
-                    <CardText>{this.props.selected_tweet.content}</CardText>
-                    <CardSubtitle>{this.props.selected_tweet.date}</CardSubtitle>
+                    <CardText>
+                      {this.props.selected_tweet.content}
+                    </CardText>
+                    <CardSubtitle>
+                      {this.props.selected_tweet.date}
+                    </CardSubtitle>
                   </CardBody>
                 </Card>
               </Col>
